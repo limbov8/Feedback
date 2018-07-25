@@ -13,6 +13,9 @@ Google Analytics Web Feedback Collection Plugin
     } );
 ```
 
+![ga-feedback](https://raw.githubusercontent.com/limbov8/Feedback/master/example.png)
+
+
 ## Create Customization Panel using this link
 
 https://analytics.google.com/analytics/web/template?uid=VRArq9vvSx248FqmkZGOIg
