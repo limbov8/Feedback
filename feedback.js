@@ -4,18 +4,14 @@
  * http://xaviesteve.com
  * Version 1.1 by Libo Liu
  */
- var Namespace = Namespace || {};
+var Namespace = Namespace || {};
 (function(e, t) {
     "use strict";
     t.gaf = {
         init: function(e) {
             this.options = e;
-            // this.loadCss();
             this.loadHtml();
             this.loadButton()
-        },
-        loadCss: function() {
-            e.head.innerHTML += "<style>" + this.css + "</style>"
         },
         loadHtml: function() {
             this.buttonHtml = '<a id="gaf-button" style="" href="#">' + this.options.open + "</a>";
@@ -63,7 +59,7 @@
             }
             window.ga("send", {
                 hitType: "event",
-                eventCategory: "Feedback Story",
+                eventCategory: this.options.eventCategory,
                 eventAction: "Question1: " + this.options.question1,
                 eventLabel: e.getElementById("gaf-text-1").value,
                 eventValue: 1
@@ -71,7 +67,7 @@
             if (e.getElementById("gaf-text-2").value.trim().length > 0) {
                 window.ga("send", {
                     hitType: "event",
-                    eventCategory: "Feedback Story",
+                    eventCategory: this.options.eventCategory,
                     eventAction: "Question2: " + this.options.question2,
                     eventLabel: e.getElementById("gaf-text-2").value,
                     eventValue: 1
